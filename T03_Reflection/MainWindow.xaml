@@ -1,0 +1,28 @@
+﻿<Window x:Class="T03_Reflection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:T03_Reflection"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500" MinWidth="500" MinHeight="450">
+    <StackPanel Background="#222222">
+        <StackPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="8,4"/>
+                <Setter Property="Background" Value="Black" />
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="BorderBrush" Value="White"/>
+                <Setter Property="BorderThickness" Value="3" />
+            </Style>
+        </StackPanel.Resources>
+
+        <Button x:Name="btnActivator" Content="Initialize via activator" Click="btnActivator_Click" />
+        <Button x:Name="btnMethod" Content="Call public method (no params)" Click="btnMethod_Click" />
+        <Button x:Name="btnMethodParam" Content="Call public method (string parameter)" Click="btnMethodParam_Click" />
+        <Button x:Name="btnChangePrivate" Content="Change private field" Click="btnChangePrivate_Click"/>
+        <TextBlock x:Name="txtOutput" Foreground="White" FontSize="11"/>
+    </StackPanel>
+</Window>
